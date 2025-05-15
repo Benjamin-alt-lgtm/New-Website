@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>News Blog</title>
+</head>
+<body class="bg-gray-200 font-serif">
+    <hr class="py-8">
+    <!-- Social Icons and Header -->
+    <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-10">
+        <div class="flex space-x-4 mb-4 md:mb-0">
+            <a href="#facebook"><i class="bx bxl-facebook-circle text-2xl text-gray-700 hover:text-blue-600"></i></a>
+            <a href="#twitter"><i class="bx bxl-twitter text-2xl text-gray-700 hover:text-blue-400"></i></a>
+            <a href="#instagram"><i class="bx bxl-instagram text-2xl text-gray-700 hover:text-pink-500"></i></a>
+            <a href="#linkedin"><i class="bx bxl-linkedin-square text-2xl text-gray-700 hover:text-blue-800"></i></a>
+        </div>
+        <div class="mb-4 md:mb-0">
+            <h1 class="text-3xl md:text-4xl text-center md:text-left"><span class="text-red-600">BENJAMIN</span> NEWS</h1>
+        </div>
+        <div id="MyBtn" class="hidden md:flex space-x-4">
+            <button class="px-6 py-2 rounded-md bg-black text-white hover:bg-gray-800">Subscribe</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md px-4 md:px-10 py-7">
+        <!-- Hamburger Menu -->
+        <button id="menue" class="md:hidden text-gray-500 focus:outline-none">
+            <i class="bx bx-menu text-3xl"></i>
+        </button>
+        <!-- Desktop Menu -->
+        <ul id="nav-links" class="hidden md:flex justify-center space-x-6 items-center">
+            <li><a href="#Home" class="text-gray-700 hover:text-red-600">Home</a></li>
+            <li><a href="#Health" class="text-gray-700 hover:text-red-600">Health</a></li>
+            <li><a href="#Sport" class="text-gray-700 hover:text-red-600">Sport</a></li>
+            <li><a href="#Politics" class="text-gray-700 hover:text-red-600">Politics</a></li>
+            <li><a href="#Business" class="text-gray-700 hover:text-red-600">Business</a></li>
+            <li><a href="#World" class="text-gray-700 hover:text-red-600">World</a></li>
+        </ul>
+        <!-- Mobile Menu -->
+        <div id="mobileMenue" class="hidden md:hidden px-4 pb-4 flex-col">
+            <ul class="space-y-2 text-center">
+                <li><a href="#Home" class="text-gray-700 hover:text-red-600">Home</a></li>
+                <li><a href="#Health" class="text-gray-700 hover:text-red-600">Health</a></li>
+                <li><a href="#Sport" class="text-gray-700 hover:text-red-600">Sport</a></li>
+                <li><a href="#Politics" class="text-gray-700 hover:text-red-600">Politics</a></li>
+                <li><a href="#Business" class="text-gray-700 hover:text-red-600">Business</a></li>
+                <li><a href="#World" class="text-gray-700 hover:text-red-600">World</a></li>
+            </ul>
+            <div class="pt-4">
+                <button class="w-full rounded-md px-5 py-2 bg-black text-white hover:bg-gray-800">Subscribe</button>
+            </div>
+        </div>
+    </nav>
+  <main class="container mx-auto px-4 py-8">
+    <div id="news-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap 6">
+
+    </div>
+  </main>
+    <script src="script.js"defer></script>
+</body>
+</html>
