@@ -14,15 +14,15 @@ newsContainer.innerHTML = '<p class="text-gray-600 text-center">Loading articles
 
 fetch(apiLink)
     .then(response => {
-        console.log('Response status:', response.status); // Debug: Log status
+        console.log('Response status:', response.status);
         if (!response.ok) {
             throw new Error(`Network response was not ok: ${response.status}`);
         }
         return response.json();
     })
     .then(data => {
-        console.log('API Data:', data); // Debug: Log full response
-        newsContainer.innerHTML = ''; // Clear loading state
+        console.log('API Data:', data);
+        newsContainer.innerHTML = ''; 
         if (data.articles && data.articles.length > 0) {
             data.articles.forEach(article => {
                 const articleElement = document.createElement('div');

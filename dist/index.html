@@ -12,10 +12,10 @@
     <!-- Social Icons and Header -->
     <div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-10">
         <div class="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://www.Facebookgit .com/benjamin.zino.16/" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook-circle text-2xl text-gray-700 hover:text-blue-600"></i></a>
+            <a href="https://www.Facebookgit.com/benjamin.zino.16/" target="_blank" aria-label="Facebook"><i class="bx bxl-facebook-circle text-2xl text-gray-700 hover:text-blue-600"></i></a>
             <a href="https://x.com/IamMilekan" target="_blank" aria-label="Twitter"><i class="bx bxl-twitter text-2xl text-gray-700 hover:text-blue-400"></i></a>
             <a href="https://www.instagram.com/benjamin.zino.16/" target="_blank" aria-label="Instagram"><i class="bx bxl-instagram text-2xl text-gray-700 hover:text-pink-500"></i></a>
-            <a href="https://www.linkedin.com/in/ehinju-benjamin-olamilekan-6805b51a1/" target="" aria-label="LinkedIn"><i class="bx bxl-linkedin-square text-2xl text-gray-700 hover:text-blue-800"></i></a>
+            <a href="https://www.linkedin.com/in/ehinju-benjamin-olamilekan-6805b51a1/" target="_blank" aria-label="LinkedIn"><i class="bx bxl-linkedin-square text-2xl text-gray-700 hover:text-blue-800"></i></a>
             <a href="https://github.com/Benjamin-alt-lgtm" target="_blank" aria-label="GitHub"><i class="bx bxl-github text-2xl text-gray-700 hover:text-gray-900"></i></a>
         </div>
         <div class="mb-4 md:mb-0">
@@ -26,7 +26,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
     <nav class="bg-white shadow-md px-4 md:px-10 py-7">
         <!-- Hamburger Menu -->
         <button id="menue" class="md:hidden text-gray-500 focus:outline-none">
@@ -34,22 +33,22 @@
         </button>
         <!-- Desktop Menu -->
         <ul id="nav-links" class="hidden md:flex justify-center space-x-6 items-center">
-            <li><a href="#Home" class="text-gray-700 hover:text-red-600">Home</a></li>
-            <li><a href="#Health" class="text-gray-700 hover:text-red-600">Health</a></li>
-            <li><a href="#Sport" class="text-gray-700 hover:text-red-600">Sport</a></li>
-            <li><a href="#Politics" class="text-gray-700 hover:text-red-600">Politics</a></li>
-            <li><a href="#Business" class="text-gray-700 hover:text-red-600">Business</a></li>
-            <li><a href="#World" class="text-gray-700 hover:text-red-600">World</a></li>
+            <li><a href="/" class="text-gray-700 hover:text-red-600">Home</a></li>
+            <li><a href="/health" class="text-gray-700 hover:text-red-600">Health</a></li>
+            <li><a href="/sport" class="text-gray-700 hover:text-red-600">Sport</a></li>
+            <li><a href="/politics" class="text-gray-700 hover:text-red-600">Politics</a></li>
+            <li><a href="/business" class="text-gray-700 hover:text-red-600">Business</a></li>
+            <li><a href="/world" class="text-gray-700 hover:text-red-600">World</a></li>
         </ul>
         <!-- Mobile Menu -->
         <div id="mobileMenue" class="hidden md:hidden px-4 pb-4 flex-col">
             <ul class="space-y-2 text-center">
-                <li><a href="#Home" class="text-gray-700 hover:text-red-600">Home</a></li>
-                <li><a href="#Health" class="text-gray-700 hover:text-red-600">Health</a></li>
-                <li><a href="#Sport" class="text-gray-700 hover:text-red-600">Sport</a></li>
-                <li><a href="#Politics" class="text-gray-700 hover:text-red-600">Politics</a></li>
-                <li><a href="#Business" class="text-gray-700 hover:text-red-600">Business</a></li>
-                <li><a href="#World" class="text-gray-700 hover:text-red-600">World</a></li>
+                <li><a href="/" class="text-gray-700 hover:text-red-600">Home</a></li>
+                <li><a href="/health" class="text-gray-700 hover:text-red-600">Health</a></li>
+                <li><a href="/sport" class="text-gray-700 hover:text-red-600">Sport</a></li>
+                <li><a href="/politics" class="text-gray-700 hover:text-red-600">Politics</a></li>
+                <li><a href="/business" class="text-gray-700 hover:text-red-600">Business</a></li>
+                <li><a href="/world" class="text-gray-700 hover:text-red-600">World</a></li>
             </ul>
             <div class="pt-4">
                 <button class="w-full rounded-md px-5 py-2 bg-black text-white hover:bg-gray-800">Subscribe</button>
@@ -57,10 +56,18 @@
         </div>
     </nav>
 
-    <!-- Main Content: News Articles -->
+    <!-- Main News Articles -->
     <main class="container mx-auto px-4 py-8">
+        <h2 id="category-title" class="text-2xl font-bold mb-6">Latest News</h2>
         <div id="news-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <p class="text-gray-600 text-center">Loading articles...</p>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="flex justify-center space-x-4 mt-6">
+            <button id="prev-page" class="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50" disabled>Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" class="px-4 py-2 bg-gray-300 rounded-md">Next</button>
         </div>
     </main>
 
