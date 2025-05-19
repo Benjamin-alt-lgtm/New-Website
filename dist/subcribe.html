@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Subscribe</title>
+</head>
+<body class="flex justify-center items-center min-h-screen bg-red-500 font-roboto">
+    <div class="w-max h-auto bg-white rounded-md px-6 py-8 text-center shadow-lg">
+        <i class='bx bxs-bell-ring text-4xl text-red-600 mb-4'></i>
+        <h2 class="text-xl font-bold mb-2">Subscribe to our newsletters</h2>
+        <span class="text-gray-600 block mb-4">For updates and notifications on the latest happenings</span>
+        <form id="subscribe-form" class="mb-4">
+            <input 
+                type="email" 
+                class="border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-red-500" 
+                name="email" 
+                id="email" 
+                placeholder="Enter your email..." 
+                required
+            >
+            <div>
+                <button type="submit" id="subscribe-btn" class="px-6 py-2 bg-red-500 text-white mt-4 rounded-md hover:bg-red-600 transition">Subscribe</button>
+            </div>
+            <p id="message" class="mt-2 text-sm text-gray-600"></p>
+        </form>
+    </div>
+
+    <script>
+        const subscribeForm = document.getElementById('subscribe-form');
+        const emailInput = document.getElementById('email');
+        const message = document.getElementById('message');
+
+  
+        subscribeForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent page reload
+            const email = emailInput.value.trim(); 
+
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                message.textContent = 'Please enter a valid email address.';
+                message.classList.add('text-red-600');
+                return;
+            }
+
+            let emails = JSON.parse(localStorage.getItem('subscribedEmails')) || [];
+            if (!emails.includes(email)) {
+                emails.push(email);
+                localStorage.setItem('subscribedEmails', JSON.stringify(emails));
+                message.textContent = 'Subscribed successfully!';
+                message.classList.remove('text-red-600');
+                message.classList.add('text-green-600');
+            } else {
+                message.textContent = 'This email is already subscribed.';
+                message.classList.add('text-red-600');
+            }
+
+                emailInput.value = '';
+
+            console.log('Stored emails:', JSON.parse(localStorage.getItem('subscribedEmails')));
+        });
+    </script>
+</body>
+</html>
